@@ -16,7 +16,7 @@ function Headbar(){
                     {!user && <Link to="/signup">Sign Up</Link>}
                     {!user && <Link to="/login">Log In</Link>}
                     {user && <Link to="/create">Create BAND</Link>}
-                    {/* <Link to="/explore">Explore BANDs</Link> */}
+                    {user && <Link to="/search">Search Users</Link>}
                     {user && <Link to= "/edit">Edit BANDs</Link>}
                     {user && <Link to= "/verify">Verify BANDs</Link>}
                     {user && <Link to= "/invite">Invite</Link>}

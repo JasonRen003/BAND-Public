@@ -20,7 +20,11 @@ export const useCollection = (c, _q) => {
             snapshot.docs.forEach(doc => { 
                 results.push({id: doc.id, ...doc.data() })    
             })                
-            const sortedBands = [...results].sort((a,b) => { return (a['Event Name']).localeCompare(b['Event Name']) })
+            const sortedBands = [...results].sort((a,b) => { 
+                if(a['Event Name'] != null){
+                    return (a['Event Name']).localeCompare(b['Event Name']) 
+                }
+            })
             setDocuments(sortedBands)
         })
 
